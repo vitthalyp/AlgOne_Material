@@ -12,7 +12,8 @@ An intial implementation in SAGEMATH v8.7.
 
 ## Representation - First choice
 
-Present the puzzle by placing its pieces around a [Roman surface](https://en.wikipedia.org/wiki/Roman_surface) with a hole centered at (0,0,0)
+Present the puzzle by placing its pieces around a [Roman surface](https://en.wikipedia.org/wiki/Roman_surface) with a hole centered at (0,0,0).
+
 To push a puzzle piece into the hole, hold the edge of the tetrahedron the connects that piece to the hole. Proceed to twist the edge by 180 degrees, until the piece occupies the central location.
 
 ### Issues
