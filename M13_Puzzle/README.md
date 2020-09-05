@@ -30,3 +30,5 @@ Present the puzzle by placing its pieces at particular vertices of an icosahedro
 ## Prototype 3
 
 Using the icosahedron representation the puzzle was implemented in SAGEMATH v9.1.
+
+(The puzzle can now be scrambled.)
