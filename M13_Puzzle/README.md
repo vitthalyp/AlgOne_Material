@@ -19,3 +19,14 @@ Present the puzzle by placing its pieces around a [Roman surface](https://en.wik
 Using the Roman surface representation and fixing the hole at the center, the puzzle was implemented in SAGEMATH v9.1. 
 
 The projective space ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%7BP%7D%5E%7B2%7D%28%5Cmathbb%7BF%7D_%7B3%7D%29) has 13 lines, we display precisely those lines that intersect the point labelled 'hole' and thus we can fix the hole at the center. 
+
+### Issues
+- The way the puzzle works makes no visual sense in this presentation.
+
+## Representation - Icosahedron
+
+Present the puzzle by placing its pieces at particular vertices of an icosahedron with a hole centered at (0,0,0).
+
+## Prototype 3
+
+Using the icosahedron representation the puzzle was implemented in SAGEMATH v9.1.
