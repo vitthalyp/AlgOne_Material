@@ -29,6 +29,6 @@ Present the puzzle by placing its pieces at particular vertices of an icosahedro
 
 ## Prototype 3
 
-Using the icosahedron representation the puzzle was implemented in SAGEMATH v9.1.
+Using the icosahedron representation the puzzle was implemented in SAGEMATH v9.1. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vitthalyp/AlgOne_Material/master?filepath=%2FM13_Puzzle%2FPuzzle_Prototype_Three.ipynb)
 
 (The puzzle can now be scrambled.)
