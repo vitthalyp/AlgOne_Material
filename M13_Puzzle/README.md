@@ -25,7 +25,7 @@ The projective space ![equation](https://latex.codecogs.com/gif.latex?%5Cmathbb%
 
 ## Representation - Icosahedron
 
-Present the puzzle by placing its pieces at particular vertices of an icosahedron with a hole centered at (0,0,0).
+Present the puzzle by placing its pieces at the vertices of an icosahedron with a hole centered at (0,0,0).
 
 ## Prototype 3
 
