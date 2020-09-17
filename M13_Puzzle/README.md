@@ -1,6 +1,8 @@
 # M13 Puzzle
 
-Building the puzzle described in Noam Elkies's [paper](https://arxiv.org/pdf/math/0508630.pdf)
+The idea for this came from Dr. Sebastian Egner's JAVA applet mentioned in this [article](http://www.neverendingbooks.org/the-mathieu-groupoid-1)
+
+The puzzle is labelled as per the scheme provided in Noam Elkies's [paper](https://arxiv.org/pdf/math/0508630.pdf)
 
 ## Prototype 1
 
