@@ -1,0 +1,20 @@
+def paint(c):
+    P = circle((0,0),c,color = 'black', thickness = 0.1, axes = False)
+    temp = 2^c
+    angle = 2*pi/temp
+    for i in range(temp):
+        P += point((c*cos(i*angle),c*sin(i*angle)),size = 5, hue=c/11)
+    return P
+def iterPaint(c,start):
+    P = paint(start)
+    for i in range(start+1,c):
+        P += paint(i)
+    return P
+def descent(start):
+    T = [iterPaint(c,start) for c in range(start,11)]
+    T = animate(T)
+    T.show()
+
+# type descent(n) below. n can be 1,2,3,....,9
+
+descent(1)

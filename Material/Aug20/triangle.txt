@@ -1,0 +1,81 @@
+T = polygon([(1,0),(-0.5,sqrt(3)/2),(-0.5,-sqrt(3)/2)],fill=False, color='black',axes=False)
+P11 = point((1,0),color='red',size=80)
+P12 = point((1,0),color='green',size=80)
+P13 = point((1,0),color='blue',size=80)
+P21 = point((-0.5,sqrt(3)/2),color='green',size=80)
+P22 = point((-0.5,sqrt(3)/2),color='blue',size=80)
+P23 = point((-0.5,sqrt(3)/2),color='red',size=80)
+P31 = point((-0.5,-sqrt(3)/2),color='blue',size=80)
+P32 = point((-0.5,-sqrt(3)/2),color='red',size=80)
+P33 = point((-0.5,-sqrt(3)/2),color='green',size=80)
+
+s1 = T+P11+P21+P31
+s2 = T+P11+P22+P33 
+s3 = T+P12+P22+P32 
+s4 = T+P12+P23+P31 
+s5 = T+P13+P23+P33 
+s6 = T+P13+P21+P32 
+
+class node:
+    def __init__(self,now):
+        self.picture = now
+        self.rot = None
+        self.mir = None
+    def set_rot(self,r):
+        self.rot = r
+    def set_mir(self,m):
+        self.mir = m
+    def get_rot(self):
+        return self.rot
+    def get_mir(self):
+        return self.mir
+    def get_image(self):
+        return self.picture
+
+class Cayley:
+    def _init__(self):
+        self.head = None
+    def addNode(self,node):
+        self.head = node
+    def getNode(self):
+        return self.head
+
+State1 = node(s1)
+State2 = node(s2)
+State3 = node(s3)
+State4 = node(s4)
+State5 = node(s5)
+State6 = node(s6)
+
+State1.set_rot(State5)
+State1.set_mir(State2)
+State2.set_rot(State4)
+State2.set_mir(State1)
+State3.set_rot(State1)
+State3.set_mir(State4)
+State4.set_rot(State6)
+State4.set_mir(State3)
+State5.set_rot(State3)
+State5.set_mir(State6)
+State6.set_rot(State2)
+State6.set_mir(State5)
+
+G = Cayley()
+G.addNode(State1)
+
+def nothing():
+    temp = G.getNode().get_image()
+    show(temp)
+def rotation():
+    temp = G.getNode().get_rot()
+    G.addNode(temp)
+    show(temp.get_image())
+def mirror():
+    temp = G.getNode().get_mir()
+    G.addNode(temp)
+    show(temp.get_image())
+
+@interact
+def _(action=selector(['nothing','rotation','mirror']),auto_update=False):
+    action = eval(action)
+    action()

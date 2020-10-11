@@ -1,0 +1,66 @@
+pointa1 = point((-1,1),color='red', size = 80)
+pointa2 = point((-1,-1),color='red', size = 80)
+pointb1 = point((0,1),color='blue', size = 80)
+pointb2 = point((0,-1),color='blue', size = 80)
+pointc1 = point((1,1),color='green', size = 80)
+pointc2 = point((1,-1),color='green', size = 80)
+
+T = pointa1+pointa2+pointb1+pointb2+pointc1+pointc2
+
+Line11 = line([(-1,1),(-1,-1)],color='black')
+Line12 = line([(-1,1),(0,-1)],color='black')
+Line13 = line([(-1,1),(1,-1)],color='black')
+Line21 = line([(0,1),(-1,-1)],color='black')
+Line22 = line([(0,1),(0,-1)],color='black')
+Line23 = line([(0,1),(1,-1)],color='black')
+Line31 = line([(1,1),(-1,-1)],color='black')
+Line32 = line([(1,1),(0,-1)],color='black')
+Line33 = line([(1,1),(1,-1)],color='black')
+
+s1 = T+Line11+Line22+Line33
+s2 = T+Line11+Line23+Line32
+s3 = T+Line12+Line21+Line33
+s4 = T+Line13+Line22+Line31
+s5 = T+Line12+Line23+Line31
+s6 = T+Line13+Line21+Line32
+
+table = {'s1': [s1,s2,s3,s4,s5,s6],
+         's2': [s2,s1,s5,s6,s3,s4],
+         's3': [s3,s6,s1,s5,s4,s2],
+         's4': [s4,s5,s6,s1,s2,s3],
+         's5': [s5,s4,s2,s3,s6,s1],
+         's6': [s6,s3,s4,s2,s1,s5]}
+
+keys = ['None','s1','s2','s3','s4','s5','s6']
+print('To check the labelling of elements set display to Yes.\n')
+@interact
+def _(display = selector(['No',"Yes"]),first = selector(keys),second = selector(keys),auto_update = False):
+    if display == 'Yes':
+        print('s1')
+        show(s1,axes=False)
+        print('s2')
+        show(s2,axes=False)
+        print('s3')
+        show(s3,axes=False)
+        print('s4')
+        show(s4,axes=False)
+        print('s5')
+        show(s5,axes=False)
+        print('s6')
+        show(s6,axes=False)
+    else:
+        if first == 'None' or second == 'None':
+            print('Provide input.\n')
+        else:
+            row = table[first]
+            other = table[second]
+            column = keys.index(second)-1
+            state = row[column]
+            f = row[0]
+            s = other[0]
+            print(first)
+            show(f,axes=False)
+            print(second)
+            show(s,axes=False)
+            print('evaluates to')
+            show(state,axes=False)

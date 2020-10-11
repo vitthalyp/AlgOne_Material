@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\documentclass[tikz,border=5]{standalone}
+\usetikzlibrary{lindenmayersystems}
+\pgfdeclarelindenmayersystem{cayley}{
+  \rule{X -> X [ R [F[--FX]-F[--FX]-F] ]}
+  \symbol{R}{
+    \pgflsystemstep=0.5\pgflsystemstep
+  } 
+}
+\begin{document}
+\begin{tikzpicture}
+\draw l-system [l-system={cayley, axiom= F[--FX]-F[--FX]-F[--FX], angle=120,step=2.5cm, order=6}];
+\end{tikzpicture}
+\end{document}
+
+%Order is the number of iterations
