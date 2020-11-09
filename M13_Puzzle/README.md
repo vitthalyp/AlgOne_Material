@@ -34,3 +34,9 @@ Present the puzzle by placing its pieces at the vertices of an icosahedron with 
 Using the icosahedron representation the puzzle was implemented in SAGEMATH v9.1. [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vitthalyp/AlgOne_Material/master?filepath=%2FM13_Puzzle%2FDemo_Puzzle.ipynb)
 
 (The puzzle can now be scrambled.)
+
+## Solver
+
+A ![solver](https://github.com/vitthalyp/M13) has been implemented using a ported version of Dr.Sebastian Egner's code. 
+
+
